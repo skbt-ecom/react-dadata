@@ -15,7 +15,7 @@ interface Props extends BaseProps<DaDataAddress> {
 }
 
 export class AddressSuggestions extends BaseSuggestions<DaDataAddress, Props> {
-  loadSuggestionsUrl = 'https://suggestions.dadata.ru/suggestions/api/4_1/rs/suggest/address';
+  loadSuggestionsUrl = 'https://api-app.sovcombank.ru/v1/cache/dadata/address';
 
   getLoadSuggestionsData = (): Record<string, unknown> => {
     const {

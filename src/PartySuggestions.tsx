@@ -14,7 +14,7 @@ interface Props extends BaseProps<DaDataParty> {
 }
 
 export class PartySuggestions extends BaseSuggestions<DaDataParty, Props> {
-  loadSuggestionsUrl = 'https://suggestions.dadata.ru/suggestions/api/4_1/rs/suggest/party';
+  loadSuggestionsUrl = 'https://api-app.sovcombank.ru/v1/cache/dadata/party';
 
   getLoadSuggestionsData = (): Record<string, unknown> => {
     const { count, filterStatus, filterType, filterOkved, filterLocations, filterLocationsBoost } = this.props;

@@ -9,7 +9,7 @@ interface Props extends BaseProps<DaDataFio> {
 }
 
 export class FioSuggestions extends BaseSuggestions<DaDataFio, Props> {
-  loadSuggestionsUrl = 'https://suggestions.dadata.ru/suggestions/api/4_1/rs/suggest/fio';
+  loadSuggestionsUrl = 'https://api-app.sovcombank.ru/v1/cache/dadata/fio';
 
   getLoadSuggestionsData = (): Record<string, unknown> => {
     const { count, filterGender, filterParts } = this.props;

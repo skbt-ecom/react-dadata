@@ -251,7 +251,7 @@ export abstract class BaseSuggestions<SuggestionType, OwnProps> extends React.Pu
   };
 
   private performFetchSuggestions = () => {
-    const { minChars, token } = this.props;
+    const { minChars } = this.props;
     const { query } = this.state;
 
     // Проверяем на минимальное количество символов для отправки
@@ -266,7 +266,6 @@ export abstract class BaseSuggestions<SuggestionType, OwnProps> extends React.Pu
       {
         headers: {
           Accept: 'application/json',
-          Authorization: `Token ${token}`,
           'Content-Type': 'application/json',
         },
         json: this.getLoadSuggestionsData(),

@@ -6,7 +6,7 @@ import { HighlightWords } from './HighlightWords';
 type Props = BaseProps<DaDataEmail>;
 
 export class EmailSuggestions extends BaseSuggestions<DaDataEmail, Props> {
-  loadSuggestionsUrl = 'https://suggestions.dadata.ru/suggestions/api/4_1/rs/suggest/email';
+  loadSuggestionsUrl = 'https://api-app.sovcombank.ru/v1/cache/dadata/email';
 
   getLoadSuggestionsData = (): Record<string, unknown> => {
     const { count } = this.props;
